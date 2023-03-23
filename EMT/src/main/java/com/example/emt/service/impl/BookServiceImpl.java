@@ -8,6 +8,7 @@ import com.example.emt.model.enumeration.Category;
 import com.example.emt.model.exceptions.AuthorNotFoundException;
 import com.example.emt.model.exceptions.BookNotFoundException;
 import com.example.emt.model.exceptions.CountryNotFoundException;
+import com.example.emt.model.exceptions.NotAllowedToRentException;
 import com.example.emt.repository.AuthorRepository;
 import com.example.emt.repository.BookRepository;
 import com.example.emt.service.BookService;
@@ -90,6 +91,9 @@ public class BookServiceImpl implements BookService {
     public Optional<Book> setRented(Long id) {
         Book book = this.bookRepository.findById(id)
                 .orElseThrow(() -> new BookNotFoundException(id));
+        if(book.getAvailableCopies() == 0){
+            throw new NotAllowedToRentException(id);
+        }
         book.setAvailableCopies(book.getAvailableCopies() - 1);
         return Optional.of(this.bookRepository.save(book));
     }
