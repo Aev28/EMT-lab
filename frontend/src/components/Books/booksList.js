@@ -46,8 +46,8 @@ class BooksList extends React.Component {
                         </div>
                     </div>
                 </div>
-                <ReactPaginate previousLabel={"back"}
-                               nextLabel={"next"}
+                <ReactPaginate previousLabel={"«"}
+                               nextLabel={"»"}
                                breakLabel={<a href="/#">...</a>}
                                breakClassName={"break-me"}
                                pageClassName={"ml-1"}

@@ -42,7 +42,21 @@
 }
 
 #root > main > div > div > ul > li > a {
-  text-decoration: none
+  text-decoration: none;
+  float: left;
+  color: #0d6efd;
+  border-radius: 50%;
+  line-height: 27px;
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  border: 1px solid #e0e0e0;
+}
+
+#root > main > div > div > ul > li > a:hover {
+  background: #0d6efd;
+  color: white;
+  border: 1px solid #0d6efd;
 }
 
 
