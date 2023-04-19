@@ -37,3 +37,13 @@
   }
 }
 
+#root > main > div > div > ul > li {
+  padding-left: 5px;
+}
+
+#root > main > div > div > ul > li > a {
+  text-decoration: none
+}
+
+
+

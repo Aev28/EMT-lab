@@ -40,7 +40,7 @@ class BooksList extends React.Component {
                     <div className="col mb-3">
                         <div className="row">
                             <div className="col-sm-12 col-md-12">
-                                <Link className={"btn btn-block btn-dark container w-25 d-flex justify-content-center"}
+                                <Link className={"btn btn-block btn-dark container w-25 d-flex justify-content-center mt-2"}
                                       to={"/books/add"}>Add new book</Link>
                             </div>
                         </div>
@@ -55,7 +55,7 @@ class BooksList extends React.Component {
                                marginPagesDisplayed={2}
                                pageRangeDisplayed={5}
                                onPageChange={this.handlePageClick}
-                               containerClassName={"pagination m-4 justify-content-center"}
+                               containerClassName={"pagination m-1 justify-content-center"}
                                activeClassName={"active"}
                                 />
             </div>

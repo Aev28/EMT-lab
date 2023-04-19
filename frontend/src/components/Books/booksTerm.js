@@ -13,7 +13,7 @@ const BooksTerm = (props) => {
                       onClick={() => props.MarkTaken(props.term.id)}>
                     Mark As Taken
                 </Link>
-                <Link className={"btn btn-info me-2"}
+                <Link className={"btn btn-primary me-2"}
                       onClick={() => props.onEdit(props.term.id)}
                       to={`/books/edit/${props.term.id}`}>
                     Edit
