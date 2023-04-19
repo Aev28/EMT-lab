@@ -12,6 +12,8 @@ import com.example.emt.model.exceptions.NotAllowedToRentException;
 import com.example.emt.repository.AuthorRepository;
 import com.example.emt.repository.BookRepository;
 import com.example.emt.service.BookService;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -96,5 +98,10 @@ public class BookServiceImpl implements BookService {
         }
         book.setAvailableCopies(book.getAvailableCopies() - 1);
         return Optional.of(this.bookRepository.save(book));
+    }
+
+    @Override
+    public Page<Book> findAllWithPagination(Pageable pageable) {
+        return this.bookRepository.findAll(pageable);
     }
 }

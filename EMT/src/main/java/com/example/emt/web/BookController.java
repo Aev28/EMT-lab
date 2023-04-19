@@ -4,6 +4,7 @@ import com.example.emt.model.Book;
 import com.example.emt.model.DTO.BookDTO;
 import com.example.emt.model.enumeration.Category;
 import com.example.emt.service.BookService;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -64,5 +65,10 @@ public class BookController {
     @GetMapping("/categories")
     public List<Category> getCategories() {
         return Arrays.asList(Category.values());
+    }
+
+    @GetMapping("/pagination")
+    public List<Book> findAllWithPagination(Pageable pageable) {
+        return this.bookService.findAllWithPagination(pageable).getContent();
     }
 }
