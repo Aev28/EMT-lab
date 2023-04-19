@@ -23,7 +23,7 @@ class BooksList extends React.Component {
             <div className={"container mm-4 mt-5"}>
                 <div className={"row"}>
                     <div className={"table-responsive"}>
-                        <table className={"table table-striped"}>
+                        <table className={"table table-striped text-center"}>
                             <thead>
                             <tr>
                                 <th scope={"col"}>Name</th>
@@ -40,7 +40,8 @@ class BooksList extends React.Component {
                     <div className="col mb-3">
                         <div className="row">
                             <div className="col-sm-12 col-md-12">
-                                <Link className={"btn btn-block btn-dark"} to={"/books/add"}>Add new book</Link>
+                                <Link className={"btn btn-block btn-dark container w-25 d-flex justify-content-center"}
+                                      to={"/books/add"}>Add new book</Link>
                             </div>
                         </div>
                     </div>
@@ -55,7 +56,8 @@ class BooksList extends React.Component {
                                pageRangeDisplayed={5}
                                onPageChange={this.handlePageClick}
                                containerClassName={"pagination m-4 justify-content-center"}
-                               activeClassName={"active"}/>
+                               activeClassName={"active"}
+                                />
             </div>
         )
     }

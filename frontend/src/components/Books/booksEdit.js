@@ -22,9 +22,9 @@ const BooksEdit = (props) => {
         const name = formData.name !== "" ? formData.name : props.book.name;
         const availableCopies = formData.availableCopies !== 0 ? formData.availableCopies : props.book.availableCopies;
         const category = formData.category !== 0 ? formData.category : props.book.category;
-        const authorId = formData.author !== 0 ? formData.author : props.book.author.id;
+        const author = formData.author !== 0 ? formData.author : props.book.author.id;
 
-        props.onEditBook(props.book.id, name,category,authorId, availableCopies);
+        props.onEditBook(props.book.id, name,category,author, availableCopies);
         navigate("/books");
     }
 
@@ -71,7 +71,7 @@ const BooksEdit = (props) => {
                     </div>
                     <div className="form-group">
                         <label>Author</label>
-                        <select name="authorId" className="form-control" onChange={handleChange}>
+                        <select name="author" className="form-control" onChange={handleChange}>
                             {props.authors.map((term) =>{
                                     if(props.book.author !== undefined && props.book.author.id === term.id)
                                         return <option selected={props.book.author.id} value={term.id}>{term.name}</option>
@@ -81,7 +81,7 @@ const BooksEdit = (props) => {
                             )}
                         </select>
                     </div>
-                    <button id="submit" type="submit" className="btn btn-primary">Submit</button>
+                    <button id="submit" type="submit" className="btn btn-primary mt-3 ">Submit</button>
                 </form>
             </div>
         </div>

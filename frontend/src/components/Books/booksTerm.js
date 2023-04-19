@@ -9,11 +9,11 @@ const BooksTerm = (props) => {
             <td>{props.term.author.name}</td>
             <td>{props.term.availableCopies}</td>
             <td className={"text-right"}>
-                <Link className={"btn btn-success"}
+                <Link className={"btn btn-success me-2"}
                       onClick={() => props.MarkTaken(props.term.id)}>
                     Mark As Taken
                 </Link>
-                <Link className={"btn btn-info ml-2"}
+                <Link className={"btn btn-info me-2"}
                       onClick={() => props.onEdit(props.term.id)}
                       to={`/books/edit/${props.term.id}`}>
                     Edit

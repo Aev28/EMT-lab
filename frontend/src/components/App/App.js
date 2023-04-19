@@ -101,15 +101,15 @@ class App extends Component {
             })
     }
 
-    addBook = (name, category, authorId, availableCopies) => {
-        bookEShopRepository.addBook(name, category, authorId, availableCopies)
+    addBook = (name, category, author, availableCopies) => {
+        bookEShopRepository.addBook(name, category, author, availableCopies)
             .then(() => {
                 this.loadBooks();
             })
     }
 
-    editBook = (id, name, category, authorId, availableCopies) => {
-        bookEShopRepository.editBook(id, name, category, authorId, availableCopies)
+    editBook = (id, name, category, author, availableCopies) => {
+        bookEShopRepository.editBook(id, name, category, author, availableCopies)
             .then(() => {
                 this.loadBooks();
             })

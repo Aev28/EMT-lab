@@ -19,7 +19,7 @@ const bookEShopRepository = {
     },
 
     addBook: (name, category, author, availableCopies) => {
-        return axios.post("/books/add", {
+        return axios.post(`/books/add`, {
             "name": name,
             "category": category,
             "author": author,

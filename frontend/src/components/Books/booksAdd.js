@@ -18,13 +18,13 @@ const BooksAdd = (props) => {
     }
 
     const onFormSubmit = (e) => {
-        e.preventDefault()
-        const name = formData.name
-        const category = formData.category
-        const author = formData.author
-        const availableCopies = formData.availableCopies
-        props.onAddBook(name,category,author,availableCopies)
-        navigate('/books')
+        e.preventDefault();
+        const name = formData.name;
+        const category = formData.category;
+        const author = formData.author;
+        const availableCopies = formData.availableCopies;
+        props.onAddBook(name,category,author,availableCopies);
+        navigate('/books');
     }
 
     return(
@@ -63,13 +63,13 @@ const BooksAdd = (props) => {
                     </div>
                     <div className="form-group">
                         <label>Author</label>
-                        <select name="authorId" className="form-control" onChange={handleChange}>
+                        <select name="author" className="form-control" onChange={handleChange}>
                             {props.authors.map((term) =>
                                 <option value={term.id}>{term.name}</option>
                             )}
                         </select>
                     </div>
-                    <button id="submit" type="submit" className="btn btn-primary">Submit</button>
+                    <button id="submit" type="submit" className="btn btn-primary mt-2">Submit</button>
                 </form>
             </div>
         </div>
