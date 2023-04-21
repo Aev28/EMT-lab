@@ -49,7 +49,7 @@ const BooksEdit = (props) => {
                                className="form-control"
                                id="availableCopies"
                                name="availableCopies"
-                               placeholder="Available Copies"
+                               placeholder="Available copies"
                                defaultValue={props.book.availableCopies}
                                required
                                onChange={handleChange}

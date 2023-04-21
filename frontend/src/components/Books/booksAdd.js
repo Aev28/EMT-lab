@@ -48,7 +48,7 @@ const BooksAdd = (props) => {
                                className="form-control"
                                id="availableCopies"
                                name="availableCopies"
-                               placeholder="Available Copies"
+                               placeholder="Available copies"
                                required
                                onChange={handleChange}
                         />
